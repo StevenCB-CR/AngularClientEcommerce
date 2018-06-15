@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryModel } from '../shared/category.model';
+import { ProductModel } from '../shared/product.model';
 import { MantenimientoService } from '../shared/mantenimiento.service';
 import { ParametrosSys } from '../shared/parametros-sys.model';
 
@@ -12,10 +13,12 @@ export class MantenimientoAdmComponent implements OnInit {
 
   parametrosSys : ParametrosSys;
   arregloCategoria : CategoryModel[] = new Array<CategoryModel>();
+  arregloProducto : ProductModel[] = new Array<ProductModel>();
   
 
 constructor(private mantenimientoService :MantenimientoService) {
     this.mantenimientoService.obtenerCategorias().subscribe((data:any)=>this.setCategoryArray(data));
+    //this.arregloProducto.push(new ProductModel("Prueba",69,"",500,10,15,"Smart" ));
   }
   ngOnInit() { 
     

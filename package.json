@@ -11,7 +11,8 @@
     "e2e": "ng e2e"
   },
   "private": true,
-  "dependencies": { "@angular/animations": "^5.0.0",
+  "dependencies": {
+    "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
@@ -24,7 +25,7 @@
     "ngx-toastr": "^8.1.1",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
-    },
+  },
   "devDependencies": {
     "@angular/cli": "^1.6.6",
     "@angular/compiler-cli": "^5.0.0",
