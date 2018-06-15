@@ -21,6 +21,7 @@ import { MantenimientoAdmComponent } from './mantenimiento-adm/mantenimiento-adm
 import { VisualizarProductoComponent } from './visualizar-producto/visualizar-producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { MantenimientoService } from './shared/mantenimiento.service';
+import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
 
 
 @NgModule({
