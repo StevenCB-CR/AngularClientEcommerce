@@ -10,6 +10,7 @@ import { OrdenCompraComponent } from './orden-compra/orden-compra.component';
 import { MantenimientoAdmComponent } from './mantenimiento-adm/mantenimiento-adm.component';
 import { VisualizarProductoComponent } from './visualizar-producto/visualizar-producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
 
 
 
@@ -18,6 +19,7 @@ export const routes : Routes=[
   {path:'vistaproducto', component:VisualizarProductoComponent},
   {path:'mantenimiento', component:MantenimientoAdmComponent },
   {path:'home', component:HomeComponent},
+  {path:'agregarproducto', component:AgregarProductoComponent},
   {path:'ordencompra', component:OrdenCompraComponent,canActivate:[AuthGuard]},
   {
     path:'signup', component:UserComponent,
