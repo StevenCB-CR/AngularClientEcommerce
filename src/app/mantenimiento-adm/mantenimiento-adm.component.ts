@@ -18,7 +18,9 @@ export class MantenimientoAdmComponent implements OnInit {
 
 constructor(private mantenimientoService :MantenimientoService) {
     this.mantenimientoService.obtenerCategorias().subscribe((data:any)=>this.setCategoryArray(data));
-    //this.arregloProducto.push(new ProductModel("Prueba",69,"",500,10,15,"Smart" ));
+    this.arregloProducto.push(new ProductModel("Prueba",69,500,10,15,"Smart" ));
+    this.arregloProducto.push(new ProductModel("Prueba1",50,500,10,15,"Smart1" ));
+    this.arregloProducto.push(new ProductModel("Prueba2",65,500,10,15,"Smart2" ));
   }
   ngOnInit() { 
     

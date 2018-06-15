@@ -47,54 +47,16 @@
     <tbody>
       <tr *ngFor= "let item of arregloProducto" >
         <td class="center-align">{{item.id}}</td>
-        <td class="center-align">{{item.categoryName}}</td>
-        <td class="center-align">{{item.imagen}}</td>
+        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.5PE8751Uz8efQNu80eNiyQHaFu%26pid%3D15.1&f=1" alt="Tablet" height="50" width="50"></td>
+        <td class="center-align">{{item.productname}}</td>
+        <!--<td class="center-align">{{item.imagen}}</td>-->
+        <td class="center-align">{{item.precio}}</td>
+        <td class="center-align">{{item.stock}}</td>
+        <td class="center-align">{{item.ptoreorden}}</td>
+        <td class="center-align">{{item.categoria}}</td>
         <td class="center-align"><button type="button" class="btn btn-default col-md-7" (click)="editProducto(item.id)"><i class="material-icons">edit</i></button><button type="button" class="btn btn-default col-md-7" (click)="deleteProducto(item.id)"><i class="material-icons"  style="color: red">delete</i></button></td>
       </tr>
-      <tr>
-        <td class="center-align">2</td>
-        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.5PE8751Uz8efQNu80eNiyQHaFu%26pid%3D15.1&f=1" alt="Tablet" height="50" width="50"></td>
-        <td class="center-align">iPad </td>
-        <td class="center-align">$ 600</td>
-        <td class="center-align">8</td>
-        <td class="center-align">7</td>
-        <td class="center-align">Tablet</td>
-        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
-      </tr>
-      <tr>
-        <td class="center-align">1</td>
-        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
-        <td class="center-align">Samsung Galaxy S9</td>
-        <td class="center-align">$ 800</td>
-        <td class="center-align">10</td>
-        <td class="center-align">15</td>
-        <td class="center-align">Smartphone</td>
-        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
-      </tr>
-      <tr>
-        <td class="center-align">1</td>
-        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
-        <td class="center-align">Samsung Galaxy S9</td>
-        <td class="center-align">$ 800</td>
-        <td class="center-align">10</td>
-        <td class="center-align">15</td>
-        <td class="center-align">Smartphone</td>
-        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
-      </tr>
-      <tr>
-        <td class="center-align">1</td>
-        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
-        <td class="center-align">Samsung Galaxy S9</td>
-        <td class="center-align">$ 800</td>
-        <td class="center-align">10</td>
-        <td class="center-align">15</td>
-        <td class="center-align">Smartphone</td>
-        <td class="center-align"><a href="#modal1" id="edit"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
-        
-
-
-      </tr>
-    </tbody>
+     </tbody>
   </table><br>
   <div id="modal1" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 0; top: 4%; transform: scaleX(0.8) scaleY(0.8);">
     <div class="modal-content">
