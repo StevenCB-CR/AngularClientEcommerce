@@ -25,7 +25,7 @@ constructor(private mantenimientoService :MantenimientoService) {
    console.log(arreglo);
     this.arregloCategoria=arreglo;
   }
-  editCategory(id:any){ }
+  editCategory(id:any){ } 
   deleteCategory(id:any){ }
 
 }
