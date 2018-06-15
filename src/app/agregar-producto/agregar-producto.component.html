@@ -1,0 +1,68 @@
+<app-navbar></app-navbar><br>
+<div id="test3" class="col s12" style="background-color: whitesmoke"><br>
+  <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="col s4 center-align" style="margin-top: 2em;">  
+              Descripcion:
+          </div>
+          <div class="input-field col s8">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col s4 center-align" style="margin-top: 2em;">  
+                Precio:
+            </div>
+            <div class="input-field col s8">
+              <input id="last_name" type="number" class="validate">
+              <label for="last_name">Precio</label>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col s4 center-align" style="margin-top: 2em;">  
+                  Stock:
+              </div>
+              <div class="input-field col s8">
+                <input id="last_name" type="number" class="validate">
+                <label for="last_name">Strock</label>
+              </div>
+            </div>
+
+            <div class = "row">
+                <div class="col s4 center-align" style="margin-top: 1em;">  
+                    PreOrden:
+                </div>
+                <form class = "col s8 ">
+                   <div class = "row">               
+                      <label>Materialize DatePicker</label>              
+                      <input type = "date" class = "datepicker" />    
+                   </div>            
+                </form>       
+             </div>
+            
+
+        <div class="row">
+            <div class="col s4 center-align" style="margin-top: 2em;">  
+                Categoría:
+            </div>
+            <div class="input-field col s8">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Categoría</label>
+            </div>
+          </div>
+
+          
+      </form>
+      <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action"><i class="material-icons right">edit</i>Actualizar Información
+      </button>
+    </div>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
+    </script>
