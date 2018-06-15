@@ -11,7 +11,7 @@ import { ParametrosSys } from '../shared/parametros-sys.model';
 })
 export class MantenimientoAdmComponent implements OnInit {
 
-  parametrosSys : ParametrosSys;
+  parametrosSys : ParametrosSys = new ParametrosSys();
   arregloCategoria : CategoryModel[] = new Array<CategoryModel>();
   arregloProducto : ProductModel[] = new Array<ProductModel>();
   
@@ -21,6 +21,10 @@ constructor(private mantenimientoService :MantenimientoService) {
     this.arregloProducto.push(new ProductModel("Prueba",69,500,10,15,"Smart" ));
     this.arregloProducto.push(new ProductModel("Prueba1",50,500,10,15,"Smart1" ));
     this.arregloProducto.push(new ProductModel("Prueba2",65,500,10,15,"Smart2" ));
+    this.parametrosSys.nombre="nombreQuemado";
+    this.parametrosSys.direccion="direccionQuemado";
+    this.parametrosSys.registroLegal="legalQuemado";
+    this.parametrosSys.tax= 6969;
   }
   ngOnInit() { 
     

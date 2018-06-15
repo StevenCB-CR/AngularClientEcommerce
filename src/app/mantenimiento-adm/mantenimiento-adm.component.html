@@ -92,17 +92,16 @@
                   Nombre:
               </div>
               <div class="input-field col s8">
-                <input id="last_name" type="text" class="validate">
+                <input id="last_name" type="text" class="validate" [(ngModel)]="parametrosSys.nombre" [ngModelOptions]="{standalone: true}">
                 <label for="last_name">Nombre</label>
               </div>
             </div>
-
             <div class="row">
                 <div class="col s4 center-align" style="margin-top: 2em;">  
                     Registro legal:
                 </div>
                 <div class="input-field col s8">
-                  <input id="last_name" type="text" class="validate">
+                  <input id="last_name" type="text" class="validate" [(ngModel)]="parametrosSys.registroLegal" [ngModelOptions]="{standalone: true}">
                   <label for="last_name">Registro legal</label>
                 </div>
               </div>
@@ -112,7 +111,7 @@
                       Tax:
                   </div>
                   <div class="input-field col s8">
-                    <input id="last_name" type="number" class="validate">
+                    <input id="last_name" type="number" class="validate" [(ngModel)]="parametrosSys.tax" [ngModelOptions]="{standalone: true}">
                     <label for="last_name">Impuesto</label>
                   </div>
                 </div>
@@ -122,7 +121,7 @@
                         Dirección:
                     </div>
                     <div class="input-field col s8">
-                      <input id="adress" type="text" class="validate">
+                      <input id="adress" type="text" class="validate" [(ngModel)]="parametrosSys.direccion" [ngModelOptions]="{standalone: true}">
                       <label for="adress">Direccion</label>
                     </div>
                   </div>
