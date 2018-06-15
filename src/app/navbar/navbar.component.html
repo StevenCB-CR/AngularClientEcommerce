@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">
+      <i class="material-icons">cloud</i>Compras Express App</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a *ngIf="token!=null" (click)="Logout()">Logout</a>
+      </li>
+      <li>
+        <a *ngIf="token==null" (click)="Login()">Login</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

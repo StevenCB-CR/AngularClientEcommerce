@@ -1,0 +1,176 @@
+<app-navbar></app-navbar><br>
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s4"><a href="#test1">Categorías</a></li>
+      <li class="tab col s4"><a class="active" href="#test2">Productos</a></li>
+      <li class="tab col s4"><a href="#test3">Información Organizacional</a></li>
+      
+    </ul>
+  </div>
+  <div id="test1" class="col s12 centered responsive-table striped"><table style="background-color: whitesmoke">
+      <thead>
+        <tr>
+            <th class="center-align">Id</th>
+            <th class="center-align">Name</th>
+            <th class="center-align">Options</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor= "let item of arregloCategoria" >
+          <td class="center-align">{{item.id}}</td>
+          <td class="center-align">{{item.categoryName}}</td>
+          <td class="center-align"><button type="button" class="btn btn-default col-md-7" (click)="editCategory(item.id)"><i class="material-icons">edit</i></button><button type="button" class="btn btn-default col-md-7" (click)="deleteCategory(item.id)"><i class="material-icons"  style="color: red">delete</i></button></td>
+        </tr>
+      </tbody>
+    </table><br>
+    <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action">Nueva Categoría
+      <i class="material-icons right">add</i>
+    </button>
+  </div>
+  <div id="test2" class="col s12 centered responsive-table striped"><table style="background-color: whitesmoke">
+    <thead>
+      <tr>
+          <th class="center-align">Id</th>
+          <th class="center-align">Imagen</th>
+          <th class="center-align">Descripción</th>
+          <th class="center-align">Precio</th>
+          <th class="center-align">Stock</th>
+          <th class="center-align">Pto Reorden</th>
+          <th class="center-align">Categoría</th>
+          <th class="center-align">Options</th>
+          
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="center-align">1</td>
+        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
+        <td class="center-align">Samsung Galaxy S9</td>
+        <td class="center-align">$ 800</td>
+        <td class="center-align">10</td>
+        <td class="center-align">15</td>
+        <td class="center-align">Smartphone</td>
+        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
+      </tr>
+      <tr>
+        <td class="center-align">2</td>
+        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.5PE8751Uz8efQNu80eNiyQHaFu%26pid%3D15.1&f=1" alt="Tablet" height="50" width="50"></td>
+        <td class="center-align">iPad </td>
+        <td class="center-align">$ 600</td>
+        <td class="center-align">8</td>
+        <td class="center-align">7</td>
+        <td class="center-align">Tablet</td>
+        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
+      </tr>
+      <tr>
+        <td class="center-align">1</td>
+        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
+        <td class="center-align">Samsung Galaxy S9</td>
+        <td class="center-align">$ 800</td>
+        <td class="center-align">10</td>
+        <td class="center-align">15</td>
+        <td class="center-align">Smartphone</td>
+        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
+      </tr>
+      <tr>
+        <td class="center-align">1</td>
+        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
+        <td class="center-align">Samsung Galaxy S9</td>
+        <td class="center-align">$ 800</td>
+        <td class="center-align">10</td>
+        <td class="center-align">15</td>
+        <td class="center-align">Smartphone</td>
+        <td class="center-align"><a href="#test1"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
+      </tr>
+      <tr>
+        <td class="center-align">1</td>
+        <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.L-N2yj8GQFMD6uOYCb_JWAHaEK%26pid%3D15.1&f=1" alt="Smartphone" height="50" width="50"></td>
+        <td class="center-align">Samsung Galaxy S9</td>
+        <td class="center-align">$ 800</td>
+        <td class="center-align">10</td>
+        <td class="center-align">15</td>
+        <td class="center-align">Smartphone</td>
+        <td class="center-align"><a href="#modal1" id="edit"><i class="material-icons">edit</i></a><a href="#test1"><i class="material-icons"  style="color: red">delete</i></a></td>
+        
+
+
+      </tr>
+    </tbody>
+  </table><br>
+  <div id="modal1" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 0; top: 4%; transform: scaleX(0.8) scaleY(0.8);">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-red btn-flat">Disagree</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+  
+
+  <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action">Nuevo Producto
+    <i class="material-icons right">add</i>
+  </button>
+  </div>
+  <div id="test3" class="col s12"><br>
+      <div class="row">
+          <form class="col s12">
+              <div class="row">
+                  <div class="col s12 center-align" >  
+                      <h4>Parámetros del sistema </h4>
+                  </div>
+              </div>
+
+            <div class="row">
+              <div class="col s4 center-align" style="margin-top: 2em;">  
+                  Nombre:
+              </div>
+              <div class="input-field col s8">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Nombre</label>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col s4 center-align" style="margin-top: 2em;">  
+                    Registro legal:
+                </div>
+                <div class="input-field col s8">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Registro legal</label>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col s4 center-align" style="margin-top: 2em;">  
+                      Tax:
+                  </div>
+                  <div class="input-field col s8">
+                    <input id="last_name" type="number" class="validate">
+                    <label for="last_name">Impuesto</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s4 center-align" style="margin-top: 2em;">  
+                        Dirección:
+                    </div>
+                    <div class="input-field col s8">
+                      <input id="adress" type="text" class="validate">
+                      <label for="adress">Direccion</label>
+                    </div>
+                  </div>
+            
+          </form>
+          <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action"><i class="material-icons right">edit</i>Actualizar Información </button>
+        </div>
+  
+  </div>
