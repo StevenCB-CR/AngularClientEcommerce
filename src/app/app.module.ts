@@ -31,6 +31,7 @@ import { AgregarProductoComponent } from './agregar-producto/agregar-producto.co
     UserComponent,
     SignInComponent,
     HomeComponent,
+    AgregarProductoComponent,
     OrdenCompraComponent,
     NavbarComponent,
     MantenimientoAdmComponent,

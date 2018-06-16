@@ -25,9 +25,22 @@
         </tr>
       </tbody>
     </table><br>
-    <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action">Nueva Categoría
+    <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action" onclick="mostrarCategoria()">Nueva Categoría
       <i class="material-icons right">add</i>
     </button>
+    <br><br><br>
+
+    <div class="hide" id="agregarCategoria">
+      <div class="row">
+          <div class="col s4 center-align" style="margin-top: 2em;">  
+              Nombre:
+          </div>
+          <div class="input-field col s8">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Nueva categoría</label>
+          </div>
+        </div>
+    </div>
   </div>
   <div id="test2" class="col s12 centered responsive-table striped"><table style="background-color: whitesmoke">
     <thead>
