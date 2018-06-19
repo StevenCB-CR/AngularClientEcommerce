@@ -4,7 +4,6 @@ import {Response, Http} from '@angular/http';
 import {Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 import { User } from './user.model';
-import { HttpResponse } from 'selenium-webdriver/http';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Injectable()
@@ -13,8 +12,6 @@ export class UserService {
   constructor(private http: Http,private httpC:HttpClient) { }
   registerUser(user:User){
    
-    console.log("Esto es lo que se envía:  ");
-    console.log(user);
     return this.http.post(this.rootUrl+'/',user);
   }
    userAuthentication(nameUser,pass) :Observable<any>{

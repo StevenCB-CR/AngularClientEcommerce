@@ -93,7 +93,7 @@
   </div>
   <div id="test3" class="col s12"><br>
       <div class="row">
-          <form class="col s12">
+          <form class="col s12" #SysParametersForm="ngForm" (ngSubmit)="OnSubmit(SysParametersForm)">
               <div class="row">
                   <div class="col s12 center-align" >  
                       <h4>Parámetros del sistema </h4>
@@ -105,7 +105,7 @@
                   Nombre:
               </div>
               <div class="input-field col s8">
-                <input id="last_name" type="text" class="validate" [(ngModel)]="parametrosSys.nombre" [ngModelOptions]="{standalone: true}">
+                <input id="last_name" type="text" name="systemName" class="validate" [(ngModel)]="parametrosSys.systemName" [ngModelOptions]="{standalone: true}">
                 <label for="last_name">Nombre</label>
               </div>
             </div>
@@ -114,7 +114,7 @@
                     Registro legal:
                 </div>
                 <div class="input-field col s8">
-                  <input id="last_name" type="text" class="validate" [(ngModel)]="parametrosSys.registroLegal" [ngModelOptions]="{standalone: true}">
+                  <input id="last_name" type="text" name="legalRegistrationName" class="validate" [(ngModel)]="parametrosSys.legalRegistrationName" [ngModelOptions]="{standalone: true}">
                   <label for="last_name">Registro legal</label>
                 </div>
               </div>
@@ -124,7 +124,7 @@
                       Tax:
                   </div>
                   <div class="input-field col s8">
-                    <input id="last_name" type="number" class="validate" [(ngModel)]="parametrosSys.tax" [ngModelOptions]="{standalone: true}">
+                    <input id="last_name" type="number" name="taxPercentage" class="validate" [(ngModel)]="parametrosSys.taxPercentage" [ngModelOptions]="{standalone: true}">
                     <label for="last_name">Impuesto</label>
                   </div>
                 </div>
@@ -134,13 +134,13 @@
                         Dirección:
                     </div>
                     <div class="input-field col s8">
-                      <input id="adress" type="text" class="validate" [(ngModel)]="parametrosSys.direccion" [ngModelOptions]="{standalone: true}">
+                      <input id="adress" type="text" name="companyAddress" class="validate" [(ngModel)]="parametrosSys.companyAddress" [ngModelOptions]="{standalone: true}">
                       <label for="adress">Direccion</label>
                     </div>
                   </div>
             
           </form>
-          <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action"><i class="material-icons right">edit</i>Actualizar Información </button>
+          <button class="btn waves-effect waves-light col s3 offset-s9" type="button" (click)="OnSubmit()"><i class="material-icons right">edit</i>Actualizar Información </button>
         </div>
   
   </div>
