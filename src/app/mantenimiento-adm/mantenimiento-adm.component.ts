@@ -20,13 +20,10 @@ export class MantenimientoAdmComponent implements OnInit {
 constructor(private mantenimientoService :MantenimientoService) {
     this.mantenimientoService.obtenerCategorias().subscribe((data:any)=>this.setCategoryArray(data));
     this.mantenimientoService.obtenerParametrosSys().subscribe((data:any)=>this.setParametrosSys(data));
-    this.arregloProducto.push(new ProductModel("Prueba",69,500,10,15,"Smart" ));
-    this.arregloProducto.push(new ProductModel("Prueba1",50,500,10,15,"Smart1" ));
-    this.arregloProducto.push(new ProductModel("Prueba2",65,500,10,15,"Smart2" ));
-    //this.parametrosSys.systemName="nombreQuemado";
-    //this.parametrosSys.companyAddress="direccionQuemado";
-    //this.parametrosSys.legalRegistrationName="legalQuemado";
-    //this.parametrosSys.taxPercentage= 6969;
+    this.mantenimientoService.obtenerProductos().subscribe((data:any)=>this.setProductos(data));
+    //this.arregloProducto.push(new ProductModel("Prueba",69,500,10,15,"Smart" ));
+    //this.arregloProducto.push(new ProductModel("Prueba1",50,500,10,15,"Smart1" ));
+    //this.arregloProducto.push(new ProductModel("Prueba2",65,500,10,15,"Smart2" ));
   }
   ngOnInit() { 
     
@@ -39,9 +36,13 @@ constructor(private mantenimientoService :MantenimientoService) {
   setParametrosSys(parametros:ParametrosSys){ 
      this.parametrosSys=parametros;
    }
+   setProductos(productos: ProductModel[]) {
+    this.arregloProducto=productos;
+  }
 
    OnSubmit(){
-   
+   //actualizacion parametros del sistema
+   //TODO (arreglar comunicacón con API)
     console.log("estamos en la consola");
     console.log(this.parametrosSys);
     this.mantenimientoService.updateParametersSys(this.parametrosSys);

@@ -7,11 +7,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class MantenimientoService {
   
+  
   readonly rootUrl = 'http://localhost:8080/api';
-  constructor(private http: Http,private httpC: HttpClient) {
-    
-   }
+  constructor(private http: Http,private httpC: HttpClient) { }
 
+  obtenerProductos():Observable<any> {
+    return this.http.get(this.rootUrl+"/product/").map(response=>response.json());
+  }
   public obtenerCategorias():Observable<any>{
     return this.http.get(this.rootUrl+"/ProductCategory/").map(response =>response.json());
   }
