@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  downloadPDF(){
+    const doc = new jsPDF();
+    doc.text('Some text here', 10, 10);
+
+    doc.save('Test.pdf');
   }
 
 

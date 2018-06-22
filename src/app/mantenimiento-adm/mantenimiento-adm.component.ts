@@ -3,6 +3,8 @@ import { CategoryModel } from '../shared/category.model';
 import { ProductModel } from '../shared/product.model';
 import { MantenimientoService } from '../shared/mantenimiento.service';
 import { ParametrosSys } from '../shared/parametros-sys.model';
+import { NgIf } from '@angular/common';
+
 
 @Component({
   selector: 'app-mantenimiento-adm',
@@ -30,6 +32,18 @@ constructor(private mantenimientoService :MantenimientoService) {
    console.log(arreglo);
     this.arregloCategoria=arreglo;
   }
+  /*mostrarCategoria(){
+    var nvo= document.getElementById("agregarCategoria");
+    NgIf nvo.click
+    
+  } */
+  agregar(){
+    
+  } 
+
+  addCategory(producto:ProductModel){
+    this.arregloProducto.push(producto);
+   }
   editCategory(id:any){ } 
   deleteCategory(id:any){ }
 
