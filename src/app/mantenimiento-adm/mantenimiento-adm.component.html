@@ -61,11 +61,11 @@
       <tr *ngFor= "let item of arregloProducto" >
         <td class="center-align">{{item.id}}</td>
         <td class="center-align"><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.5PE8751Uz8efQNu80eNiyQHaFu%26pid%3D15.1&f=1" alt="Tablet" height="50" width="50"></td>
-        <td class="center-align">{{item.productname}}</td>
+        <td class="center-align">{{item.productName}}</td>
         <!--<td class="center-align">{{item.imagen}}</td>-->
-        <td class="center-align">{{item.precio}}</td>
-        <td class="center-align">{{item.stock}}</td>
-        <td class="center-align">{{item.ptoreorden}}</td>
+        <td class="center-align">{{item.price}}</td>
+        <td class="center-align">{{item.unitsOnStock}}</td>
+        <td class="center-align">{{item.reorderPoint}}</td>
         <td class="center-align">{{item.categoria}}</td>
         <td class="center-align"><button type="button" class="btn btn-default col-md-7" (click)="editProducto(item.id)"><i class="material-icons">edit</i></button><button type="button" class="btn btn-default col-md-7" (click)="deleteProducto(item.id)"><i class="material-icons"  style="color: red">delete</i></button></td>
       </tr>
@@ -95,8 +95,13 @@
 
   </div>
   <div id="test3" class="col s12"><br>
+<<<<<<< HEAD
       <div class="row" style="background-color: whitesmoke">
           <form class="col s12">
+=======
+      <div class="row">
+          <form class="col s12" #SysParametersForm="ngForm" (ngSubmit)="OnSubmit(SysParametersForm)">
+>>>>>>> daf211ff915ee381ddbf3f1ddf2622c3f60886ab
               <div class="row">
                   <div class="col s12 center-align" >  
                       <h4>Parámetros del sistema </h4>
@@ -108,17 +113,16 @@
                   Nombre:
               </div>
               <div class="input-field col s8">
-                <input id="last_name" type="text" class="validate">
+                <input id="last_name" type="text" name="systemName" class="validate" [(ngModel)]="parametrosSys.systemName" [ngModelOptions]="{standalone: true}">
                 <label for="last_name">Nombre</label>
               </div>
             </div>
-
             <div class="row">
                 <div class="col s4 center-align" style="margin-top: 2em;">  
                     Registro legal:
                 </div>
                 <div class="input-field col s8">
-                  <input id="last_name" type="text" class="validate">
+                  <input id="last_name" type="text" name="legalRegistrationName" class="validate" [(ngModel)]="parametrosSys.legalRegistrationName" [ngModelOptions]="{standalone: true}">
                   <label for="last_name">Registro legal</label>
                 </div>
               </div>
@@ -128,7 +132,7 @@
                       Tax:
                   </div>
                   <div class="input-field col s8">
-                    <input id="last_name" type="number" class="validate">
+                    <input id="last_name" type="number" name="taxPercentage" class="validate" [(ngModel)]="parametrosSys.taxPercentage" [ngModelOptions]="{standalone: true}">
                     <label for="last_name">Impuesto</label>
                   </div>
                 </div>
@@ -138,13 +142,13 @@
                         Dirección:
                     </div>
                     <div class="input-field col s8">
-                      <input id="adress" type="text" class="validate">
+                      <input id="adress" type="text" name="companyAddress" class="validate" [(ngModel)]="parametrosSys.companyAddress" [ngModelOptions]="{standalone: true}">
                       <label for="adress">Direccion</label>
                     </div>
                   </div>
             
           </form>
-          <button class="btn waves-effect waves-light col s3 offset-s9" type="submit" name="action"><i class="material-icons right">edit</i>Actualizar Información </button>
+          <button class="btn waves-effect waves-light col s3 offset-s9" type="button" (click)="OnSubmit()"><i class="material-icons right">edit</i>Actualizar Información </button>
         </div>
   
   </div>
